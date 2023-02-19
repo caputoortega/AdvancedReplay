@@ -6,13 +6,13 @@
 
     <groupId>me.jumper251</groupId>
     <artifactId>AdvancedReplay</artifactId>
-    <version>1.8.3</version>
+    <version>Custom-1.8.3</version>
 
     <repositories>
         <!-- This adds the Spigot Maven repository to the build -->
         <repository>
             <id>spigot-repo</id>
-            <url>https://hub.spigotmc.org/nexus/content/repositories/snapshots/</url>
+            <url>https://hub.spigotmc.org/nexus/content/repositories/public/</url>
         </repository>
         <!-- ProtocolLib repo -->
         <repository>
