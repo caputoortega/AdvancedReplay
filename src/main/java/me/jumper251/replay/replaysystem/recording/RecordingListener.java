@@ -201,6 +201,16 @@ public class RecordingListener extends AbstractListener {
 
 	}
 
+	@EventHandler
+	public void onCommandSend(PlayerCommandPreprocessEvent e) {
+		Player p = e.getPlayer();
+		if(recorder.getPlayers().contains(p.getName())) {
+			StringBuilder cmdData = new StringBuilder();
+			cmdData.append("&e(Command) ").append(e.getMessage());
+			this.packetRecorder.addData(p.getName(), new ChatData(cmdData.toString()));
+		}
+	}
+
 
 	@EventHandler (ignoreCancelled = true, priority = EventPriority.MONITOR)
 	public void onBed(PlayerBedEnterEvent e) {
